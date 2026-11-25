@@ -9,3 +9,5 @@ Everything is under construction.
 
 Disclaimer: all opinions are mine and not my employer's nor clients'.
 
+This site does not contain any writing by LLM.
+

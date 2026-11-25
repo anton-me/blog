@@ -28,7 +28,7 @@ I think so, provided it is explicitly documented in technical specifications.
 
 A purist might argue that this approach tries to circumvent the data traceability in job manifest files. I think that the full record of read files is in the sub-job run manifests, and also in the main job logs.
 
-Unfortunately, there is no LSAF API macro to programmatically check out a file to transient workspace. Both `%lsaf_checkin()` and `%lsaf_copy()` store the file in user's workspace _even if called from a repository job_. 
+Unfortunately, there is no LSAF API macro to programmatically check out a file to transient workspace. Both `%lsaf_checkin()` and `%lsaf_copy()` store the file in user's workspace _even if called from a repository job_. Making the data to go through the user's workspace creates a lot of issues, including versioning artefacts (imagine two jobs by the same user running in parallel while the repository file had changed), excessive data retention etc.
 # What the alternatives are?
 There are not much other ways to read files programmatically. I suppose that workflows can be the official solution. I never got these working, as the Eclipse plug-in they depend on no longer works.
 
